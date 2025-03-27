@@ -80,7 +80,7 @@ html,body{
     animation-iteration-count: infinite;
 }
 
-@keyframes anime {
+@keyframes loaderAnime {
     0%{
         font-family: "plain light";
         -webkit-text-stroke: 1px #fff;
@@ -149,12 +149,13 @@ html,body{
     width: 72%;
     margin-left: 27%;
     height: fit-content;
-    overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
-    position: relative;
-    z-index: 9999;
+    /* position: relative; */
+    /* z-index: 9999; */
 }
+
 
 .hero:nth-child(2){
     margin-top: 18vh;
@@ -165,6 +166,16 @@ html,body{
     text-transform: uppercase;
     line-height: 7vw;
     font-weight: 600;
+    position: relative;
+}
+
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    left: 17%;
+    top: 30.2%;
 }
 
 .hero h2{
@@ -258,10 +269,20 @@ html,body{
     font-size: 7vw;
     text-transform: uppercase;
     font-weight: 500;
+    position: relative;
+}
+
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    left: -14%;
+    top: 8%;
 }
 
 #page4-content .underline{
-    height: 1.3 px;
+    height: 1.3px;
     width: 100%;
     background-color: #fff;
     margin: 5vw 0;
@@ -303,7 +324,7 @@ html,body{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     padding: 3vw 0.9vw;
     border-bottom: 1px solid #fff;
 
@@ -322,5 +343,138 @@ html,body{
 #page5{
     min-height: 100vh;
     width: 100%;
+    position: relative;
+    padding-top: 9vh;
 
+}
+
+.elem{
+    /* background-color: #FFA63D; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    /* background-color: #FFA63D; */
+    margin-bottom: -2vw;
+}
+
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    /* background-color: cyan; */
+    animation-name: anime;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime{
+    from{
+        transform: translateX(0);
+    }   
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.elem2{
+    /* background-color: #FFA63D; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+}
+
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: transparent;
+    display: inline-block;
+    margin-right: 16px;
+    /* background-color: cyan; */
+    transform: translateX(calc(-100% - 20px));
+    animation-name: anime;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.elem span{
+    font-style: italic;
+    font-family: "silk serif";
+    color: transparent;
+}
+
+.elem2 span{
+    font-style: italic;
+    font-family: "silk serif";
+    color: transparent;
+}
+
+#footer{
+    height: 85vh;
+    width: 100%;
+    /* background-color: blueviolet;a */
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 4vw;
+}
+
+#footer h1{ 
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    /* background-color: cyan; */
+    position: relative;
+}
+
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    left: -14%;
+    top: 8%;
+}
+
+.underline{
+    height: 2px;
+    width: 100%;
+    background-color: antiquewhite;
+    margin: 3vw 0;
+}
+
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 6vw;
+}
+
+#footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+    font-weight: 500 ;
+}
+
+.box{
+    width: 20%;
+}
+
+#footer-div h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+    /* margin: 0.2vh 0; */
+}
+
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
 }
