@@ -16,15 +16,11 @@ html,body{
     overflow-x: hidden;
 }
 
-#crsr{
-    height: 2.1vw;
-    width: 2.1vw;
-    border-radius: 50%;
-    border: 1.4px solid #ffffffd8;
-    position: fixed;
-    z-index: 999;
+.mousefollower{
+    border:2px solid #fff;
+    background-color: rgb(255, 255, 255);
+    scale: 1.7;
     mix-blend-mode: difference;
-    transform: translate(-50%,-50%);
 }
 
 #loader{
@@ -209,6 +205,8 @@ html,body{
     position: relative;
     left: 28%;
     background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-position: center;
+    background-size: cover;
 
 }
 
@@ -224,6 +222,7 @@ html,body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    opacity: 0;
 }
 
 #videocursor{
@@ -249,6 +248,147 @@ html,body{
     width: 100%;
     position: relative;
     background-color: #202020;
+    padding: 13vh 2vw;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    margin-left: 28vw;
+}
+
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-family: "silk serif";
+    left: -14%;
+    top: 8%;
+}
+
+#page3 .underline{
+    margin-left: 28vw;
+    margin-top: 9vh;
+ 
+}
+
+#image-div-container{
+    /* background-color: lightpink; */
+    padding: 2vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.image-div{
+    height: 38vw;
+    width: 27vw;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    margin: 2vw;
+    background-color: lightslategrey;
+}
+
+.image-div:nth-child(1){
+    height: 29vw;
+    width: 22vw;
+}
+
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.page3-circle1{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22vh;
+    margin-left: 10vw;
+    position: relative;
+
+}
+
+.page3-circle1 svg{
+    height: 30%;
+}
+
+.page3-circle2{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 22vh; */
+    /* margin-left: 10vw; */
+    position: relative;
+
+}
+
+.page3-circle2 svg{
+    height: 30%;
+    rotate: -45deg;
+}
+
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+    border-radius: 50%;
+    transition: all ease-out 0.3s;
+
+}
+
+.circle-in p{
+    font-size: 0.98vw;
+    color: black;
+    width: 85%;
+    font-weight: 500;
+    scale: 0;
+    transition: all ease-out 0.3s;
+    transition-delay: 0.45s;
+    opacity: 0;
+}
+
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+
+.page3-circle1:hover p{
+    scale: 1;
+    opacity: 1;
+}
+
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+
+.page3-circle2:hover p{
+    scale: 1;
+    opacity: 1;
 }
 
 #page4{
@@ -478,3 +618,9 @@ html,body{
     font-weight: 500;
     font-size: 1vw;
 }
+
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
+}
+ 

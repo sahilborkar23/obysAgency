@@ -30,6 +30,7 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
+
 function loadingAnimation(){
     var tl = gsap.timeline();
 tl.from(".line h1",{
@@ -91,15 +92,66 @@ tl.from("#hero1, #page2",{
 }
 
 function cursoranimation(){
-    document.addEventListener("mousemove",function(dets){
-        gsap.to("#crsr",{
-            left:dets.x,
-            top:dets.y
-        })
-    })
-    
+    Shery.mouseFollower({
+        skew: true,
+        duration: 1,
+      });
     Shery.makeMagnet("#nav-part2 h4");
+
+    var videoContainer = document.querySelector("#videocontainer");
+    var video = document.querySelector("#videocontainer video")
+    videoContainer.addEventListener("mouseenter",function(){
+        videoContainer.addEventListener("mousemove",function(dets){
+            gsap.to(".mousefollower",{
+                opacity:0
+            });
+            gsap.to("#videocursor",{
+                left:dets.x - 500 ,
+                y:dets.y - 100,
+            });
+        });
+    });
+    videoContainer.addEventListener("mouseleave",function(){
+        gsap.to(".mousefollower",{
+            opacity:1,
+        });
+        gsap.to("#videocursor",{
+            left:"70%",
+            top:"-15%",
+        });
+    });
+
+    var flag = 0
+    videoContainer.addEventListener("click",function(){
+        if(flag == 0){
+            video.play()
+            video.style.opacity = 1
+            document.querySelector("#videocursor").innerHTML = '<i class="ri-pause-mini-fill"></i>'
+            gsap.to("#videocursor",{
+                scale:0.5
+            })
+            flag = 1
+        }else{
+            video.pause()
+            video.style.opacity = 0
+            document.querySelector("#videocursor").innerHTML = '<i class="ri-play-mini-fill"></i>'
+            gsap.to("#videocursor",{
+                scale:1
+            })
+            flag = 0
+        }           
+    })
+
+}
+
+function sheryAnimation(){
+    Shery.imageEffect(".image-div", {
+        style: 5,
+        debug: true,
+        gooey:true
+      });
 }
 loadingAnimation()
-// cursoranimation()
+cursoranimation()
 locomotiveAnimation()
+sheryAnimation()
