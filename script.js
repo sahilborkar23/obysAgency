@@ -35,16 +35,16 @@ function loadingAnimation(){
     var tl = gsap.timeline();
 tl.from(".line h1",{
     y:150,
-    // stagger:0.2,
-    // duration:0.6,
-    // delay:0.4
+    stagger:0.2,
+    duration:0.6,
+    delay:0.4
 });
 
 tl.from(".waiting h3", {
-    // opacity: 0,  // Start from invisible
-    // duration: 0.6,  
-    // stagger: 0.2,  
-    // delay: 1       // Delay before starting
+    opacity: 0,  // Start from invisible
+    duration: 0.6,  
+    stagger: 0.2,  
+    delay: 1       // Delay before starting
 });
 
 
@@ -59,7 +59,7 @@ tl.from("#line1part1",{
             }else{
                 h5timer.innerHTML = grow; 
             }
-        }, 3);
+        }, 30);
     },
 });
 
@@ -70,16 +70,15 @@ tl.to(".line h2",{
 
 tl.to("#loader",{
     opacity:0,
-    // duration:0.4,
-    // delay:3.8
+    duration:0.4,
+    delay:3.8
 });
 
 tl.from("#page1",{
-    // delay:0.2,
+    delay:0.1,
     y:1200,
     opacity:0,
-    // duration:0.7
-    // ease:power4
+    duration:0.7,
 })
   
 tl.to("#loader",{

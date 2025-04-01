@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "Plain Light";
     src: url(./fonts/plain-regular-webfont.ttf);
@@ -48,25 +49,39 @@ html,body{
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
     background-color: #030303;
     padding: 25vh 10vw;
 }
 
 .line{
     /* background-color: burlywood; */
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 3vw;
 }
 
 #line1part1{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 1vw;
 }
 
@@ -93,8 +108,43 @@ html,body{
     text-transform: uppercase;
     font-weight: 500;
     opacity: 0;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes loaderAnime {
+    0%{
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color:transparent;
+        font-weight: 500;
+        opacity: 1;
+
+    }
+    100%{
+        font-family: "silk serif";
+        -webkit-text-stroke: 1px #fff;
+        color:transparent;
+        font-weight: 500;
+        opacity: 0;
+
+    }
 }
 
 @keyframes loaderAnime {
@@ -146,18 +196,26 @@ html,body{
     /* height: 100%; */
     background-color: #151515;
     position: relative;
+    z-index: 99;
 }
 
 #page1{
     height: 100vh;
     width: 100%;
     background-color: #151515;
+    z-index: 100;
 }
 
 #page1 #nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 2.5vw 5.5vw;
     margin-top: -2vh;
     /* background-color: goldenrod; */
@@ -165,9 +223,15 @@ html,body{
 }
 
 .svgs {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 3vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 
@@ -178,9 +242,15 @@ html,body{
 }
 
 #nav-part2{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 3vw;
 }
 
@@ -194,11 +264,19 @@ html,body{
     /* background-color: darkgray; */
     width: 72%;
     margin-left: 27%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     /* position: relative; */
     /* z-index: 9999; */
 }
@@ -267,14 +345,16 @@ html,body{
       position: absolute;
       height: 101%;
       width: 100%;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
       top: 0;
 }
 
 #videocontainer video{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     opacity: 0;
 }
 
@@ -287,9 +367,15 @@ html,body{
     top: -13%;
     left: 67%;
     z-index: 999;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #videocursor i{
@@ -304,10 +390,17 @@ html,body{
     /* min-height: 100vh; */
     background: #151515;
     background: #151515;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 2vw;
-    align-items: end;
-    flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .projectContent{
     width: 66vw;
@@ -334,10 +427,15 @@ html,body{
     width: 100%;
     padding: 6vw 6vw 6vw 6vw;
     /* columns: 3; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     /* gap: 5vw; */
-    column-gap: 5vw;
+    -webkit-column-gap: 5vw;
+       -moz-column-gap: 5vw;
+            column-gap: 5vw;
     row-gap: 10vw;
   
   }
@@ -345,9 +443,16 @@ html,body{
   .parentImg{
     width: 25vw; 
     height: 75vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     /* background: red; */
     /* position: relative; */
   }
@@ -363,9 +468,15 @@ html,body{
     padding-top: 3vh;
     padding-bottom: 5vh; /* Adjust this value as needed */
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Add space between p and h1 */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Align items vertically */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* Add space between p and h1 */
 }
 
 .textContainer p,h1{
@@ -378,9 +489,15 @@ html,body{
     height: 23vw;
     border: 2px solid white;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 18vw;
     position: relative ;
   
@@ -404,16 +521,28 @@ html,body{
     border-radius: 50%;
     background: white;
     color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     scale: 0;
+    -webkit-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
     transition: all ease 0.4s;
   }
   .innerCircle p {
     color: black;
     font-size: 1.1vw;
-    transition-delay: 2s;
+    -webkit-transition-delay: 2s;
+         -o-transition-delay: 2s;
+            transition-delay: 2s;
+    -webkit-transition: all ease 0.6s;
+    -o-transition: all ease 0.6s;
     transition: all ease 0.6s;
     scale: 0;
     opacity: 0;
@@ -426,16 +555,19 @@ html,body{
     position: relative;
     overflow: hidden; 
     /* margin: 2vw; */
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
   }
   .imgContainer img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
   }
   ._canvas_container{
-    z-index: 999999 important;
+    z-index: 9999 important;
     pointer-events: none;
   }
 
@@ -473,14 +605,26 @@ html,body{
     height: 23vw;
     background: #FFA63D;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     font-size: 2vw;
     font-weight: 500;
     margin-top: 10vh;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .allProjects h6{
@@ -494,7 +638,9 @@ html,body{
 }
 
 .allProjects:hover {
-    transform: scale(0.9); /* Shrinks the div to 90% of its original size */
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9); /* Shrinks the div to 90% of its original size */
     /* transition: transform 0.3s ease-in-out; Smooth transition */
 }
 
@@ -542,7 +688,11 @@ html,body{
 
 #underlinecontent p{
     /* background-color: #3F7DF4; */
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-top: -5vh;
 }
@@ -554,6 +704,8 @@ html,body{
 }
 
 #page4-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -580,9 +732,15 @@ html,body{
 }
 
 .bluebox-elem{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     /* background-color: cadetblue; */
     padding: 3vw 0.9vw;
     border-bottom: 1px solid #fff;
@@ -624,18 +782,35 @@ html,body{
     display: inline-block;
     margin-right: 16px;
     /* background-color: cyan; */
-    animation-name: anime;
-    animation-duration: 25s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: anime;
+            animation-name: anime;
+    -webkit-animation-duration: 25s;
+            animation-duration: 25s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes anime{
+    from{
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }   
+    to{
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
+    }
 }
 
 @keyframes anime{
     from{
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }   
     to{
-        transform: translateX(calc(-100% - 20px));
+        -webkit-transform: translateX(calc(-100% - 20px));
+                transform: translateX(calc(-100% - 20px));
     }
 }
 
@@ -655,11 +830,17 @@ html,body{
     display: inline-block;
     margin-right: 16px;
     /* background-color: cyan; */
-    transform: translateX(calc(-100% - 20px));
-    animation-name: anime;
-    animation-duration: 25s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    -webkit-transform: translateX(calc(-100% - 20px));
+        -ms-transform: translateX(calc(-100% - 20px));
+            transform: translateX(calc(-100% - 20px));
+    -webkit-animation-name: anime;
+            animation-name: anime;
+    -webkit-animation-duration: 25s;
+            animation-duration: 25s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     animation-direction: reverse;
 }
 
@@ -709,9 +890,15 @@ html,body{
 }
 
 #footer-div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-right: 15vw;
     padding-top: 8vw;
     margin-bottom: 6vw;
@@ -751,23 +938,22 @@ html,body{
 }
  
 
-#flag {
-    height: 25vw;
-    position: absolute;
+#flag{
+    position:absolute;
+    height: 27vw;
     top: 0;
-    opacity: 0;
-
     left: 0;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    opacity: 0;
+    /* transform: translate(-50%,-50%); */
+    /* pointer-events: none; */
 }
 
 #hero3{
     z-index: 999;
     position: relative;
     /* background-color: #FFA63D; */
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
-
 
